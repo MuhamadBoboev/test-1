@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.inputGroup {
+  margin-bottom: 28px;
+}
+
+.phoneConfirmation {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.sendCodeWrap {
+  flex-shrink: 0;
+  margin-right: 24px;
+  width: calc(50% - 12px);
+}
+
+button.sendCode {
+  flex-shrink: 0;
+  height: 56px;
+  margin-right: 24px;
+  //width: calc(50% - 12px);
+}
+
+.info {
+  display: block;
+  font-size: 11px;
+  line-height: 16px;
+  color: $gray2;
+  padding-left: 4px;
+  margin-top: 2px;
+}
+
+.codeInput {
+  width: calc(50% - 12px);
+}

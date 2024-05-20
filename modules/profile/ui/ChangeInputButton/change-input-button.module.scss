@@ -1,0 +1,26 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.changeInput {
+  font-size: 13px;
+  line-height: 20px;
+  color: $gray2;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% + 6px);
+  right: 16px;
+  transform: translateY(-50%);
+  background: #fff;
+
+  &:hover {
+    svg {
+      stroke: $primary;
+    }
+  }
+
+  svg {
+    stroke: $gray2;
+    transition: all 150ms;
+  }
+}

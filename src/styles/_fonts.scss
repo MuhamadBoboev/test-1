@@ -1,0 +1,8 @@
+@import "mixins";
+
+//IBM Plex Sans: 400 & 700
+
+@include font-face($name: 'IBM Plex Sans', $weight: 400, $woff2: '/assets/fonts/IBMPlexSans-Regular.woff2', $woff: '/assets/fonts/IBMPlexSans-Regular.woff');
+@include font-face($name: 'IBM Plex Sans', $weight: 500, $woff2: '/assets/fonts/IBMPlexSans-Medium.woff2', $woff: '/assets/fonts/IBMPlexSans-Medium.woff');
+@include font-face($name: 'IBM Plex Sans', $weight: 600, $woff2: '/assets/fonts/IBMPlexSans-SemiBold.woff2', $woff: '/assets/fonts/IBMPlexSans-SemiBold.woff');
+@include font-face($name: 'IBM Plex Sans', $weight: 700, $woff2: '/assets/fonts/IBMPlexSans-Bold.woff2', $woff: '/assets/fonts/IBMPlexSans-Bold.woff');

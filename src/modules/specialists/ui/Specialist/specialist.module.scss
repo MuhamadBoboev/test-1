@@ -1,0 +1,28 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+div.wrapper {
+  margin: 80px auto 160px;
+
+  @media (max-width: $desktopSmall) {
+    margin: 46px auto 80px;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 60px auto 120px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin: 32px auto 80px;
+  }
+}
+
+.specialist {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,61 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.list {
+  font-size: 18px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item,
+.prevItem,
+.nextItem {
+  margin: 0 4px;
+
+  svg {
+    stroke: $gray;
+    stroke-width: 2px;
+  }
+}
+
+.link,
+.prevLink,
+.breakItem,
+.nextLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 32px;
+  height: 32px;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+  color: $gray;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 250ms;
+}
+
+.activeLink {
+  background: $primary;
+  color: #fff;
+  cursor: text;
+}
+
+.disabledLink {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+.breakItem {
+  cursor: auto;
+}

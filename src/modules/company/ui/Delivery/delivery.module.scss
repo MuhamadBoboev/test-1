@@ -1,0 +1,96 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 48.14%);
+  justify-content: space-between;
+  grid-row-gap: 48px;
+
+  @media (max-width: $desktopSmall) {
+    grid-template-columns: repeat(2, 48.7%);
+    grid-row-gap: 32px;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobileLarge) {
+    grid-row-gap: 20px;
+  }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  color: $gray;
+  margin: 0 0 16px;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 33px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+}
+
+.text {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0;
+  color: $gray2;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: .6px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+}
+
+.logoCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.logo {
+  flex-shrink: 0;
+  max-width: 345px;
+  width: 100%;
+  height: auto;
+
+  @media (max-width: $tablet) {
+    height: 70px;
+    object-fit: contain;
+    margin: 25px 0;
+  }
+}

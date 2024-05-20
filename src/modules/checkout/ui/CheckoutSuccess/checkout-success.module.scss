@@ -1,0 +1,27 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 40px 0 28px;
+  color: $gray;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray2;
+  max-width: 400px;
+  margin: 0 auto 40px;
+}
+
+a.toProfile,
+button.close {
+  height: 56px;
+}
+
+.toProfile {
+  margin-bottom: 16px;
+}

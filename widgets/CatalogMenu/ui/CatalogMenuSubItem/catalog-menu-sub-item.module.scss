@@ -1,0 +1,46 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.subList {
+  padding: 0;
+  list-style: none;
+  margin: 4px 0;
+  border-bottom: 1px solid $gray6;
+  overflow: hidden;
+}
+
+.subItem {
+  margin-bottom: 4px;
+}
+
+.subLink {
+  display: flex;
+  padding: 16px 12px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: .4px;
+  color: $gray;
+  text-decoration: none;
+  transition: all 250ms;
+  border-radius: 8px;
+  position: relative;
+
+  &:hover {
+    background: $primary;
+    color: #fff;
+
+    svg {
+      stroke: #fff;
+    }
+  }
+
+  svg {
+    stroke: $gray;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    transition: all 250ms;
+  }
+}

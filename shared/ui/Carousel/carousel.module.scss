@@ -1,0 +1,124 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.carousel {
+padding: 0 0 60px 0;
+border-bottom: 1px solid $gray6;
+
+}
+
+.swiper {
+  padding: 32px 20px !important;
+  margin: -32px -20px !important;
+
+  @media (max-width: $desktop) {
+    padding: 24px 16px !important;
+    margin: -24px -16px !important;
+  }
+
+  .slide {
+    height: auto !important;
+  }
+}
+
+.bottom {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 40px;
+  align-items: center;
+
+  @media (max-width: $tablet) {
+    height: 14px;
+    margin-top: 46px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    height: 8px;
+    margin-top: 28px;
+  }
+}
+
+.pagination {
+  display: flex;
+}
+
+.bullet {
+  width: 12px;
+  height: 12px;
+  background: $gray;
+  border-radius: 50%;
+  margin: 0 4px;
+
+  @media (max-width: $tablet) {
+    width: 13px;
+    height: 13px;
+    margin: 0 6px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+}
+
+.bulletActive {
+  background: $primary;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.prev,
+.next {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 250ms;
+  padding: 0;
+
+  &:hover {
+    svg {
+      stroke: $primary;
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+
+    &:hover {
+      svg {
+        stroke: $gray;
+      }
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  svg {
+    stroke: $gray;
+    transition: all 250ms;
+  }
+}
+
+.prev {
+  margin-right: 8px;
+}

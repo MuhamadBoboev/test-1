@@ -1,0 +1,99 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.accordion {
+  border-bottom: 1px solid $gray6;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.header {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  @media (max-width: $desktopSmall) {
+    padding: 12px 0;
+  }
+
+  @media (max-width: 970px) {
+    padding: 24px 0;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding: 12px 0;
+  }
+}
+
+.active {
+  .toggle {
+    transform: rotate(180deg);
+  }
+}
+
+.disable {
+  cursor: not-allowed;
+  opacity: .6;
+
+  .toggle {
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 28px;
+  color: $gray;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 16px 0 0;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  @media (max-width: 970px) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.toggle {
+  background: none;
+  padding: 0;
+  border: none;
+  display: block;
+  flex-shrink: 0;
+  transition: all 250ms;
+  cursor: pointer;
+
+  svg {
+    stroke: $gray;
+
+    @media (max-width: $desktopSmall) {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (max-width: 970px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.content {
+  padding-bottom: 10px;
+}

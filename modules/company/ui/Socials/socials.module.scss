@@ -1,0 +1,77 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+
+  //@media (max-width: $desktopSmall) {
+  //  margin-top: 50px;
+  //}
+  //
+  //@media (max-width: $tablet) {
+  //  margin-top: 66px;
+  //}
+  //
+  //@media (max-width: $mobileLarge) {
+  //  margin-top: 40px;
+  //}
+}
+
+.item {
+  margin-right: 32px;
+
+  @media (max-width: $desktopSmall) {
+    margin-right: 20px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-right: 24px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    svg {
+      stroke: darken($primary, 5%);
+      fill: darken($primary, 5%);
+    }
+  }
+
+  svg {
+    stroke: $primary;
+    fill: $primary;
+    transition: all 250ms;
+
+    @media (max-width: $desktopSmall) {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: $tablet) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (max-width: $mobileLarge) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

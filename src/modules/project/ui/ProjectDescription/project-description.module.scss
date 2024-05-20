@@ -1,0 +1,44 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.projectDescription {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 80px 0;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 32px;
+  }
+}
+
+.text {
+  flex-basis: 44%;
+  width: 44%;
+  margin: 0 24px 0 0;
+  font-size: 17px;
+  line-height: 28px;
+
+  @media (max-width: $tablet) {
+    flex-basis: 100%;
+    width: auto;
+    font-size: 15px;
+    line-height: 24px;
+    margin-right: 0;
+  }
+}
+
+.img {
+  display: block;
+  flex-shrink: 0;
+  flex-basis: 44%;
+  width: 44%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

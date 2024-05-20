@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.swiper {
+  padding: 48px 16px !important;
+  margin: -48px -16px !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $mobileLarge) {
+    margin-top: 28px;
+  }
+}
+
+.bullet {
+  background: $gray;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  margin: 0 6px;
+
+  @media (max-width: $mobileLarge) {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+}
+
+.bulletActive {
+  background: $primary;
+}

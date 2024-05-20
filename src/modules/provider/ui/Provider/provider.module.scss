@@ -1,0 +1,26 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+div.wrapper {
+  margin: 80px auto 160px;
+
+  @media (max-width: $desktopSmall) {
+    margin: 60px auto 120px;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 40px auto 80px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin: 28px auto 60px;
+  }
+}
+
+ul.breadcrumbs {
+  margin: 0 0 40px;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

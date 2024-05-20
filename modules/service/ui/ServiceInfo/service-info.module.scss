@@ -1,0 +1,150 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.info {
+  flex-basis: 47.53%;
+  width: 47.43%;
+  //overflow: hidden;
+
+  @media (max-width: $tablet) {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 28px;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 40px;
+    line-height: 46px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+.priceAndSku {
+  display: flex;
+  align-items: center;
+  margin: 0 0 32px;
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-bottom: 16px;
+  }
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: $primary;
+  margin: 0 24px 0 0;
+  display: flex;
+  position: relative;
+  padding-right: 24px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #D1D5DB;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media (max-width: $desktopSmall) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 33px;
+    line-height: 40px;
+    padding: 0;
+    margin-right: 0;
+    order: 1;
+    flex-basis: 100%;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.description {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 28px;
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 18px;
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.sku {
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray2;
+  margin: 0;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 21px;
+    line-height: 33px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+}

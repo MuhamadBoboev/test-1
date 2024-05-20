@@ -1,0 +1,12 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: 970px) {
+    display: none;
+  }
+}

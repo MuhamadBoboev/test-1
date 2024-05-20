@@ -1,0 +1,32 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.inputGroup {
+  margin-bottom: 28px;
+}
+
+button.submit,
+button.changeLoginMethod {
+  height: 56px;
+}
+
+button.submit {
+  margin-bottom: 28px;
+}
+
+button.changeLoginMethod {
+  $color: lighten($primary, 45.3%);
+  background: $color;
+  border-color: $color;
+  color: $primary;
+
+  &:hover {
+    background: darken($color, 3%);
+    border-color: darken($color, 3%);
+  }
+
+  &:active {
+    background: darken($color, 6%);
+    border-color: darken($color, 6%);
+  }
+}

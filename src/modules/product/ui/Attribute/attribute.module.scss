@@ -1,0 +1,124 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.attribute {
+  margin-bottom: 18px;
+  overflow: hidden;
+  width: 100%;
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 6px;
+  }
+}
+
+.name {
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray2;
+  margin-bottom: 16px;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 10px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 26px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: -16px 0 0;
+  padding: 0 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  margin-right: 16px;
+  margin-top: 16px;
+
+  @media (max-width: $desktopSmall) {
+    margin-right: 10px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-right: 26px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-right: 16px;
+  }
+}
+
+.button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid $primary;
+  color: $primary;
+  background: none;
+  cursor: pointer;
+  transition: all 250ms;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (max-width: $desktopSmall) {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 20px 33px;
+    border-radius: 20px;
+    font-size: 22px;
+    line-height: 33px;
+    border-width: 2px;
+    font-weight: 700;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 20px;
+    border-width: 1px;
+  }
+
+  &:hover {
+    color: #fff;
+    background: $primary;
+  }
+}
+
+.selected {
+  background: $primary;
+  color: #fff;
+}
+
+.disabled {
+  color: $gray7;
+  border-color: $gray7;
+  cursor: not-allowed;
+
+  &:hover {
+    background: none;
+    border-color: $gray7;
+    color: $gray7;
+  }
+}

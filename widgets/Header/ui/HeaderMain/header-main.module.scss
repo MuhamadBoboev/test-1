@@ -1,0 +1,56 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.main {
+  padding: 24px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid $gray6;
+  position: relative;
+
+  @media (max-width: 970px) {
+    height: 94px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding: 14px 0;
+    height: 60px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 970px) {
+    height: 100%;
+  }
+}
+
+.logo {
+  display: block;
+  margin-right: 4.62%;
+  line-height: 0;
+
+  img {
+    @media (max-width: 970px) {
+      width: 143px;
+      height: 47px;
+    }
+
+    @media (max-width: $mobileLarge) {
+      width: 104px;
+      height: 34px;
+    }
+  }
+
+  @media (max-width: $desktopSmall) {
+    margin-right: 3.82%;
+  }
+
+  @media (max-width: 970px) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

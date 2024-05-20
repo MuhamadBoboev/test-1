@@ -1,0 +1,63 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.section {
+  margin: 60px 0;
+
+  @media (max-width: $desktopSmall) {
+    margin: 96px 0;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 66px 0;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin: 40px 0;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 60px;
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-bottom: 28px;
+  }
+}
+
+.name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0 24px 0 0;
+  white-space: nowrap;
+  color: $gray;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 33px;
+    line-height: 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.buttonMore {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}

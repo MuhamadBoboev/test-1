@@ -1,0 +1,81 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.checkbox {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @media (max-width: $desktopSmall) {
+    padding: 10px 0;
+  }
+
+  @media (max-width: 970px) {
+    padding: 16px 0;
+  }
+
+  .input:checked ~ .checkmark {
+    background-color: $primary;
+    background-image: url("/assets/icons/check.svg");
+    border-color: $primary;
+  }
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 12px 0 0;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  @media (max-width: 970px) {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: .5px solid #D1D5DB;
+  background-color: #F9FAFB;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  box-sizing: border-box;
+  transition: all 150ms;
+
+  @media (max-width: $desktopSmall) {
+    width: 16px;
+    height: 16px;
+    background-size: 12px 12px;
+  }
+
+  @media (max-width: 970px) {
+    width: 24px;
+    height: 24px;
+    background-size: 16px 16px;
+  }
+}
+
+.input {
+  @include visually-hidden;
+}

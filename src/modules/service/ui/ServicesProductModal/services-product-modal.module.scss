@@ -1,0 +1,137 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+div.modalContent {
+	@media (min-width: $tablet + 1px) {
+		max-width: 680px;
+	}
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 16px;
+	margin-bottom: 48px;
+	border-bottom: 1px solid #D1D5DB;
+}
+
+.title {
+	font-size: 28px;
+	line-height: 32px;
+	font-weight: 700;
+	margin: 0 16px 0 0;
+}
+
+.close {
+	width: 24px;
+	height: 24px;
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	svg {
+		stroke: $gray2;
+	}
+}
+
+.selectWrapper {
+	position: relative;
+	margin-bottom: 24px;
+
+	svg {
+		content: "";
+		pointer-events: none;
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		right: 16px;
+		transform: translateY(-50%);
+		stroke: $gray2;
+	}
+}
+
+.select {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 18px 48px 18px 18px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	border-radius: 12px;
+	border: 1px solid $gray6;
+	color: $gray3;
+	-moz-appearance: none;
+	/* Firefox */
+	-webkit-appearance: none;
+	/* Safari and Chrome */
+	appearance: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+
+	@media (max-width: $desktopSmall) and (min-width: 861px) {
+		padding: 14px 48px 14px 14px;
+		border-radius: 8px;
+		font-size: 15px;
+	}
+
+	option {
+		color: $gray;
+	}
+}
+
+.buttons {
+	display: flex;
+	// align-items: center;
+	justify-content: space-between;
+
+	@media (max-width: $mobileLarge) {
+		flex-direction: column;
+		align-items: flex-start;
+		padding-top: 24px;
+		border-top: 1px solid #D1D5DB;
+	}
+}
+
+.buttons_body {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 16px;
+
+	@media (max-width: $tablet) {
+		width: 100%;
+	}
+}
+
+.price {
+	flex-grow: 1;
+	font-size: 24px;
+	line-height: 1;
+	font-weight: 700;
+	color: $gray;
+	margin: 0 24px 0 0;
+
+	@media (max-width: $mobileLarge) {
+		margin-bottom: 24px;
+		margin-left: auto;
+		// order: 1;
+		margin-right: 0;
+	}
+
+	span {
+		color: $primary;
+		margin-left: 16px;
+	}
+}
+
+.toCart {
+	flex-grow: 1;
+
+	@media (max-width: $mobileLarge) {
+		width: 100%;
+		// margin-bottom: 24px;
+	}
+}

@@ -1,0 +1,60 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.label {
+  font-size: 13px;
+  line-height: 24px;
+  color: $gray3;
+  margin: 0 0 8px;
+  display: block;
+}
+
+.group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+
+  &:hover ~ .button {
+    background: lighten($primary, 42%);
+  }
+
+  &:active ~ .button {
+    background: lighten($primary, 40%);
+  }
+}
+
+.button {
+  border-radius: 12px;
+  background: lighten($primary, 44%);
+  font-size: 13px;
+  line-height: 24px;
+  border: none;
+  transition: all 250ms;
+  color: $primary;
+  padding: 4px 18px;
+  font-family: inherit;
+  margin-right: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 13px;
+  line-height: 24px;
+  color: $gray3;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

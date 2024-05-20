@@ -1,0 +1,9 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.block {
+  box-sizing: border-box;
+  position: relative;
+  transition: all 250ms;
+  text-align: center;
+}

@@ -1,0 +1,98 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.userProfile {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 40px 0 rgba(238, 238, 238, 0.99),
+  0 4px 8px 0 rgba(66, 71, 76, 0.04);
+  padding: 48px;
+  margin-left: auto;
+  box-sizing: border-box;
+  flex-basis: 37%;
+  width: 37%;
+
+  @media (max-width: $desktopSmall) {
+    padding: 28px;
+  }
+
+  @media (max-width: 970px) {
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: 46px;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-top: 28px;
+  }
+}
+
+.title {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 0 0 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #D1D5DB;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 17px;
+    line-height: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 17px;
+  }
+
+  @media (max-width: 970px) {
+    display: none;
+  }
+}
+
+.buttons {
+  display: none;
+  margin-top: 46px;
+
+  @media (max-width: 970px) {
+    display: block;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-top: 28px;
+  }
+}
+
+button.changePassword,
+button.logout {
+  height: 56px;
+}
+
+button.changePassword {
+  margin-bottom: 28px;
+
+  @media (max-width: $mobileLarge) {
+    margin-bottom: 20px;
+  }
+}
+
+button.logout {
+  color: $primary;
+  $lightenPrimary: lighten($primary, 43%);
+  background: $lightenPrimary;
+  border-color: $lightenPrimary;
+
+  &:hover {
+    color: $primary;
+    $lightenPrimaryHover: lighten($primary, 40%);
+    background: $lightenPrimaryHover;
+    border-color: $lightenPrimaryHover;
+  }
+
+  &:active {
+    color: $primary;
+    $lightenPrimaryActive: lighten($primary, 36%);
+    background: $lightenPrimaryActive;
+    border-color: $lightenPrimaryActive;
+  }
+}

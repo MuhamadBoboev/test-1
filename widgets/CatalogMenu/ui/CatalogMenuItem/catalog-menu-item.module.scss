@@ -1,0 +1,47 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.item {
+  margin-bottom: 4px;
+}
+
+.link {
+  position: relative;
+  border-radius: 8px;
+  transition: all 250ms;
+  display: flex;
+  text-decoration: none;
+  color: $gray;
+  padding: 16px 42px 16px 12px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+
+  &:hover {
+    background: $primary;
+    color: #fff;
+
+    svg {
+      stroke: #fff;
+    }
+  }
+
+  svg {
+    stroke: $gray;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    transition: all 250ms;
+  }
+}
+
+.activeItem {
+  background: $primary;
+  color: #fff;
+
+  svg {
+    transform: translateY(-50%) rotate(90deg);
+    stroke: #fff;
+  }
+}

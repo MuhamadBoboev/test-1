@@ -1,0 +1,61 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.board {
+  padding: 28px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 40px 0 rgba(238, 238, 238, 0.99),
+  0 4px 8px 0 rgba(66, 71, 76, 0.04);
+  flex-basis: 62.96%;
+  width: 62.96%;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    flex-basis: 100%;
+    padding: 0;
+    box-shadow: none;
+
+  }
+}
+
+.description {
+  font-size: 17px;
+  line-height: 28px;
+  color: $gray2;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  p {
+    margin: 0 0 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1, h2, h3 {
+    color: $gray;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 24px;
+
+    @media (max-width: $tablet) {
+      font-size: 17px;
+      line-height: 28px;
+      margin-bottom: 16px;
+    }
+  }
+
+  ul {
+    margin: 0 0 24px;
+  }
+
+  li {
+    margin: 0 0 12px;
+  }
+}

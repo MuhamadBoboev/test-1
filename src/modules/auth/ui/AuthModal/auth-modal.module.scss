@@ -1,0 +1,14 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.block {
+  box-sizing: border-box;
+  position: relative;
+  transition: all 250ms;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 40px;
+}
+

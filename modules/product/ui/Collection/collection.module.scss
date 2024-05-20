@@ -1,0 +1,67 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 29.62%);
+  grid-row-gap: 48px;
+  justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 31%);
+    grid-row-gap: 30px;
+  }
+
+  @media (max-width: $desktopSmall) {
+    grid-row-gap: 30px;
+  }
+
+  @media (max-width: 970px) {
+    grid-template-columns: repeat(4, 23%);
+    grid-row-gap: 28px;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(3, 31%);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 47.53%);
+    grid-row-gap: 32px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    grid-row-gap: 24px;
+  }
+}
+
+.name {
+  font-size: 32px;
+  line-height: 48px;
+  margin: 0 0 32px;
+  font-weight: 700;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 970px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+}

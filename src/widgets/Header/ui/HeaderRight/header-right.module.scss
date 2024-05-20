@@ -1,0 +1,131 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.links {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  @media (max-width: 970px) {
+    max-width: fit-content;
+    margin-left: auto;
+  }
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: .4px;
+  color: $gray;
+  min-width: 64px;
+  transition: all 150ms ease-in-out;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+
+  @media (max-width: 970px) {
+    min-width: auto;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &:hover {
+    color: $primary;
+
+    svg {
+      stroke: $primary;
+      fill: $primary;
+    }
+  }
+
+  svg {
+    stroke: $gray2;
+    fill: $gray2;
+    margin-bottom: 4px;
+    transition: all 150ms ease-in-out;
+
+    @media (max-width: 970px) {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 0;
+      stroke: $gray;
+      fill: $gray;
+    }
+
+    @media (max-width: $mobileLarge) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.favorite {
+  position: relative;
+
+  svg {
+    fill: none;
+  }
+
+  &:hover {
+    svg {
+      fill: none;
+    }
+  }
+}
+
+span.favoriteChip {
+  @media (max-width: 970px) {
+    top: auto;
+    bottom: 0;
+    right: -6px;
+  }
+}
+
+.activeFavorite {
+  color: $primary;
+
+  svg {
+    stroke: $primary;
+  }
+}
+
+.login,
+.profile,
+.cart {
+  position: relative;
+  @media (max-width: 970px) {
+    display: none;
+  }
+}
+
+.activeCart,
+.activeProfile {
+  color: $primary;
+
+  svg {
+    stroke: $primary;
+    fill: $primary;
+  }
+}
+
+.search {
+  display: none;
+  margin-left: 26px;
+
+  @media (max-width: 970px) {
+    display: block;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-left: 16px;
+  }
+}

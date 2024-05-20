@@ -1,0 +1,158 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.checkoutDelivery {
+  // border-radius: 16px;
+  // box-shadow: 0 4px 40px 0 rgba(238, 238, 238, 0.99),
+  //   0 4px 8px 0 rgba(66, 71, 76, 0.04);
+  // padding: 48px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  
+  overflow: hidden;
+
+  @media (max-width: $desktopSmall) {
+    border-radius: 12px;
+    padding: 24px 24px 32px;
+  }
+  @media (max-width: $tabletSmall) {
+    background:#fff;
+    padding: 24px;
+    box-shadow: 0 4px 40px 0 rgba(238, 238, 238, 0.99),
+  0 4px 8px 0 rgba(66, 71, 76, 0.04);
+    }
+  @media (max-width: 860px) {
+    margin-top: 40px;
+  }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 24px;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 860px) and (min-width: $mobileLarge + 1px) {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-bottom: 20px;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0 0 32px;
+  width: fit-content;
+  // padding: 0 0 24px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 16px;
+  // border-bottom: 1px solid #d1d5db;
+  background-color: $gray1;
+  @media (max-width: 860px) {
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.item {
+  margin-right: 8px;
+
+  @media (max-width: 860px) {
+    flex-grow: 1;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-right: 16px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 16px;
+  border: transparent;
+  background: none;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: inherit;
+  color: $gray;
+  cursor: pointer;
+  transition: all 250ms;
+
+  @media (max-width: $desktopSmall) {
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 860px) {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    font-size: 20px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding: 12px;
+    font-size: 15px;
+    line-height: 20px;
+    border-radius: 12px;
+  }
+
+  // &:hover {
+  //   background: lighten($primary, 42%);
+  // }
+
+  &:active {
+    background: lighten($primary, 38%);
+  }
+}
+
+.active {
+  background: $primary;
+  color: #fff;
+
+  &:hover,
+  &:active {
+    background: $primary;
+  }
+}
+
+textarea.textArea {
+  margin-top:16px;
+  height: auto;
+  min-height: 100px;
+  max-height: 230px;
+  resize: vertical;
+  &::placeholder{
+    font-size: 17px;
+  }
+}
+
+.btn1 {
+  display: none;
+  @media (max-width: $tabletSmall) {
+    display: block;
+   margin-top: 16px;
+    width: 100%;
+  }
+}

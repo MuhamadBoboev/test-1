@@ -1,0 +1,140 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.title {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1;
+	color: $gray2;
+	margin: 0 0 24px;
+
+	@media (max-width: $desktopSmall) {
+		font-size: 17px;
+		margin-bottom: 12px;
+	}
+}
+
+.selectWrapper {
+	position: relative;
+
+	svg {
+		content: '';
+		pointer-events: none;
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 50%;
+		right: 16px;
+		transform: translateY(-50%);
+		stroke: $gray2;
+	}
+}
+
+.select {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 18px 48px 18px 18px;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 20px;
+	border-radius: 12px;
+	border: 1px solid $gray6;
+	color: $gray3;
+	-moz-appearance: none;
+	/* Firefox */
+	-webkit-appearance: none;
+	/* Safari and Chrome */
+	appearance: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: pointer;
+
+	@media (max-width: $desktopSmall) and (min-width: 861px) {
+		padding: 14px 48px 14px 14px;
+		border-radius: 8px;
+		font-size: 15px;
+	}
+
+	option {
+		color: $gray;
+	}
+}
+
+.error {
+	// position: relative;
+	color: red;
+	border: 1px solid red;
+	// &::after {
+	// 	position: absolute;
+	// 	content: 'location';
+	// 	left: 0;
+	// 	right: 0;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	width: 100%;
+	// 	height: 5px;
+	// 	color: red;
+	// }
+
+}
+
+.shippingType {
+	margin-top: 32px;
+
+	@media (max-width: $desktopSmall) {
+		margin-top: 24px;
+	}
+}
+
+.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	background-color: $gray1;
+	width: fit-content;
+	padding: 8px;
+	border-radius: 16px;
+}
+
+.item {
+	margin-right: 24px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.button {
+	padding: 10px 20px;
+	border: transparent;
+	border-radius: 16px;
+	background: none;
+	color: $gray2;
+	font-size: 13px;
+	line-height: 20px;
+	font-family: inherit;
+	cursor: pointer;
+	transition: all 250ms;
+
+	// &:hover {
+	//   background: lighten($primary, 42%);
+	//   border-color: $primary;
+	//   color: $primary;
+	// }
+
+	&:active {
+		background: lighten($primary, 38%);
+	}
+}
+
+.active {
+	border: 1px solid $primary;
+	color: $white;
+	background: $primary;
+}
+
+.clientAddress {
+	margin-top: 32px;
+}

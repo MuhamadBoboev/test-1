@@ -1,0 +1,52 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.lead {
+  padding: 28px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 40px 0 rgba(238, 238, 238, 0.99),
+  0 4px 8px 0 rgba(66, 71, 76, 0.04);
+  box-sizing: border-box;
+  flex-basis: 30.86%;
+  width: 30.86%;
+
+  @media (max-width: $desktopSmall) {
+    flex-basis: 33%;
+    width: 33%;
+  }
+
+  @media (max-width: $tablet) {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 40px;
+    padding: 24px;
+    border-radius: 16px;
+  }
+}
+
+.title {
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 24px;
+  margin: 0 0 28px;
+  border-bottom: 1px solid #D1D5DB;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.description {
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray3;
+  margin: 0 0 28px;
+
+  @media (max-width: $tablet) {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+}

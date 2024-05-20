@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 22.22%);
+  justify-content: space-between;
+  grid-row-gap: 48px;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 48%);
+    grid-row-gap: 24px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    grid-row-gap: 16px;
+  }
+}

@@ -1,0 +1,81 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.block {
+  padding: 0;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 40px;
+  text-align: center;
+  color: $gray;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  margin: 0 0 40px;
+  text-align: center;
+  color: $gray;
+}
+
+.productList {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0 0 24px;
+  border-bottom: 1px solid #D1D5DB;
+}
+
+.productItem {
+  margin-bottom: 24px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.infoList {
+  margin: 0 0 32px;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 24px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.name,
+.value {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray;
+}
+
+.value {
+  font-weight: 700;
+}
+
+.isCheckingStatus {
+  background: $gray4;
+  border: none;
+  color: $gray4;
+  border-radius: 4px;
+}
+
+button.checkPayment,
+button.paymentLink {
+  margin-bottom: 24px;
+  height: 48px !important;
+}

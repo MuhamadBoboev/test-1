@@ -1,0 +1,46 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 860px) {
+    display: none;
+  }
+}
+
+.left {
+  flex-basis: 54%;
+  width: 54%;
+  flex-shrink: 0;
+  margin-right: 3.2%;
+  flex-grow: 1;
+
+  @media (max-width: 860px) {
+    flex-basis: 100%;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.right {
+  flex-basis: 42%;
+  width: 42%;
+  flex-shrink: 0;
+
+  @media (max-width: 860px) {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media (max-width: 860px) {
+    display: block;
+  }
+}

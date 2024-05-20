@@ -1,0 +1,117 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+div.wrapper {
+  margin: 80px auto 120px;
+
+  @media (max-width: $desktopSmall) {
+    margin: 60px auto 100px;
+  }
+
+  @media (max-width: 970px) {
+    margin: 46px auto 80px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin: 28px auto 40px;
+  }
+
+  .breadcrumbs {
+    margin: 0 0 40px;
+
+    @media (max-width: $desktopSmall) {
+      margin: 0 0 25px;
+    }
+
+    @media (max-width: 970px) {
+      display: none;
+    }
+  }
+}
+
+.header {
+  padding-bottom: 40px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #D1D5DB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $desktopSmall) {
+    padding-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 23px;
+    line-height: 25px;
+  }
+
+  @media (max-width: 970px) {
+    font-size: 33px;
+    line-height: 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 970px) {
+    display: none;
+  }
+}
+
+button.logout {
+  margin-left: 28px;
+  color: $primary;
+  $lightenPrimary: lighten($primary, 43%);
+  background: $lightenPrimary;
+  border-color: $lightenPrimary;
+
+  &:hover {
+    color: $primary;
+    $lightenPrimaryHover: lighten($primary, 40%);
+    background: $lightenPrimaryHover;
+    border-color: $lightenPrimaryHover;
+  }
+
+  &:active {
+    color: $primary;
+    $lightenPrimaryActive: lighten($primary, 36%);
+    background: $lightenPrimaryActive;
+    border-color: $lightenPrimaryActive;
+  }
+
+  @media (max-width: $desktopSmall) {
+    margin-left: 18px;
+  }
+}
+
+button.changePassword,
+button.logout {
+  @media (max-width: $desktopSmall) {
+    height: 28px;
+    font-size: 8px;
+    line-height: 12px;
+    padding: 7px 16px;
+    border-radius: 8px;
+  }
+}

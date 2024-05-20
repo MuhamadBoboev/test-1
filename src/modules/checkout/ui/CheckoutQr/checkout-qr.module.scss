@@ -1,0 +1,49 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.logo {
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.block {
+  box-sizing: border-box;
+  position: relative;
+  transition: all 250ms;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 40px;
+  text-align: center;
+  color: $gray;
+}
+
+.qr {
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.qrBanks {
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.download {
+  display: block;
+  margin: 0 auto 40px;
+  width: fit-content;
+  text-decoration: none;
+  color: $primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button.submit {
+  height: 56px;
+}

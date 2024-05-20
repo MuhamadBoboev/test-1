@@ -1,0 +1,154 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+div.wrapper {
+  margin-top: 24px;
+  margin-bottom: 48px;
+
+  @media (min-width: $tablet + 1px) {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-bottom: 24px;
+  }
+}
+
+.banner {
+  max-width: 1920px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 35%;
+
+    @media (max-width: $tablet) {
+      padding-bottom: 56%;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    border-radius: 16px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    border-radius: 12px;
+  }
+}
+
+.backdrop {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .4);
+  z-index: 1;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 660px;
+  color: #fff;
+
+  @media (max-width: $desktopSmall) {
+    max-width: 400px;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  margin: 0 0 24px;
+  @include lineclamp(2);
+
+  @media (max-width: $desktopSmall) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+.description {
+  font-size: 20px;
+  line-height: 32px;
+  margin: 0;
+  @include lineclamp(5);
+
+  @media (max-width: $desktopSmall) {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.headerMobile {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #D1D5DB;
+  margin-bottom: 32px;
+
+  @media (max-width: $mobileLarge) {
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+}
+
+.titleMobile {
+  font-size: 33px;
+  line-height: 48px;
+  margin: 0;
+
+  @media (min-width: $tablet + 1px) {
+    display: none;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}

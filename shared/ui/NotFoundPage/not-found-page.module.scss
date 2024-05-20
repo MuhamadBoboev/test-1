@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.main {
+  margin: 80px 0 160px;
+  padding: 0 40px;
+
+  .toHome {
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+  }
+}
+
+.img {
+  max-width: 680px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

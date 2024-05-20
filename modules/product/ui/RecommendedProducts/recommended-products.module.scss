@@ -1,0 +1,13 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.block {
+  @media (max-width: $tablet) {
+    padding-bottom: 46px;
+    border-bottom: 1px solid $gray6;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding-bottom: 28px;
+  }
+}

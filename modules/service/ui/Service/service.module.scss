@@ -1,0 +1,36 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.service {
+  margin: 80px 0 120px;
+
+  .breadcrumbs {
+    margin-bottom: 40px;
+
+    @media (max-width: $desktopSmall) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $desktopSmall) {
+    margin: 60px 0 100px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin: 32px 0 60px;
+  }
+}
+
+.block {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
+}

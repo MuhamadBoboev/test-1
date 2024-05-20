@@ -1,0 +1,64 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.catalogMenu {
+  max-width: 336px;
+  width: 100%;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 40px 0 rgba(238, 238, 238, 0.99),
+  0 4px 8px 0 rgba(66, 71, 76, 0.04);
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  margin-right: 48px;
+  flex-shrink: 0;
+
+  @media (max-width: $desktopSmall) {
+    padding: 16px;
+    margin-right: 32px;
+  }
+
+  @media (max-width: 970px) {
+    max-width: 280px;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  overflow: overlay;
+  height: 100%;
+  width: 100%;
+
+  @media (pointer: fine) {
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+      position: absolute;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, .2);
+      border-radius: 3px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, .4);
+      border-radius: 3px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.banner {
+  flex-grow: 1;
+  flex-basis: 70.37%;
+  width: 70.37%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 4px 40px 0 rgba(238, 238, 238, 0.99),
+    0 4px 25px 10px rgba(66, 71, 76, 0.04);
+
+  @media (max-width: $tablet) and (min-width: $mobileLarge + 1px) {
+    border-radius: 26px;
+  }
+}
+
+.slider {
+  height: 100% !important;
+
+  @media (max-width: $tablet) {
+
+  }
+
+  @media (max-width: $mobileLarge) {
+    height: 100% !important;
+  }
+}
+
+.slide {
+  height: 100% !important;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  height: 12px;
+
+  @media (max-width: $tablet) {
+    bottom: 16px;
+  }
+}
+
+.bullet {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  display: block;
+  border-radius: 50%;
+  margin: 0 6.5px;
+
+  @media (max-width: $tablet) {
+    background: #000;
+  }
+
+  @media (max-width: $mobileLarge) {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+}
+
+.bulletActive {
+  background: $primary;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  right: 24px;
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  visibility: hidden;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  @media (max-width: $desktopSmall) {
+    left: 12px;
+    right: 12px;
+  }
+}
+
+.prev,
+.next {
+  background: none;
+  border: none;
+  visibility: visible;
+  padding: 0;
+  cursor: pointer;
+  transition: all 100ms;
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  svg {
+    stroke: #fff;
+
+    @media (max-width: $desktopSmall) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

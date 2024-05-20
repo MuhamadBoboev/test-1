@@ -1,0 +1,22 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 28px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  input {
+    &:disabled {
+      background: #fff;
+    }
+  }
+}
+
+button.submit {
+  height: 56px;
+  margin-top: 28px;
+}

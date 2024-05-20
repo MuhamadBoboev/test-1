@@ -1,0 +1,102 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 970px) {
+    width: 100%;
+    background: #f3f4f6;
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 26.667px;
+    overflow: auto;
+    position: relative;
+    justify-content: stretch;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding: 4px;
+    border-radius: 16px;
+  }
+}
+
+.item {
+  margin-right: 16px;
+
+  @media (max-width: $desktopSmall) {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 970px) {
+    flex-grow: 1;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.button {
+  display: block;
+  border-radius: 16px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  color: $gray2;
+  transition: all 250ms;
+  white-space: nowrap;
+  border: none;
+  width: 100%;
+  background: none;
+
+  @media (max-width: $desktopSmall) {
+    padding: 7px 16px;
+    font-size: 8.32px;
+    font-weight: 700;
+    line-height: 12.8px;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 970px) {
+    text-align: center;
+    padding: 13px 16px;
+    font-size: 21px;
+    line-height: 33.33px;
+    border-radius: 20px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding: 8px;
+    font-size: 13px;
+    line-height: 20px;
+    border-radius: 12px;
+  }
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.active {
+  background: $primary;
+  color: #fff;
+  cursor: auto;
+  pointer-events: none;
+  box-shadow: 0 3.33px 8.33px 0 rgba(0, 0, 0, 0.16);
+
+  &:hover {
+    color: #fff;
+  }
+}

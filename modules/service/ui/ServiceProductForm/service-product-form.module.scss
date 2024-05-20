@@ -1,0 +1,48 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.form {
+  min-height: 300px;
+
+  @media (max-width: $mobileLarge) {
+    min-height: 230px;
+  }
+}
+
+.formInput {
+  position: relative;
+  margin-bottom: 24px;
+
+  .input {
+    padding-right: 48px;
+  }
+}
+
+.unit {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray3;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+button.cancel,
+button.add {
+  width: 48%;
+  height: 56px;
+
+  @media (max-width: $mobileLarge) {
+    font-size: 13px;
+    line-height: 20px;
+    height: auto;
+  }
+}

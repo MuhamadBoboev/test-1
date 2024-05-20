@@ -1,0 +1,1 @@
+export type authViewType = 'loginForm' | 'registerForm' | 'loginSuccess' | 'registerSuccess'

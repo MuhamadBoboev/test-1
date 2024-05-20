@@ -1,0 +1,95 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.title {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.services {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+}
+
+.card {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #d7d7d7;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.card {
+  //display: flex;
+  //align-items: flex-start;
+  min-height: 100px;
+}
+
+.serviceName {
+  font-size: 19px;
+  line-height: 28px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  @include lineclamp(2);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 2px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.name,
+.value {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: $gray2;
+}
+
+.name {
+  margin-right: 4px;
+  color: $gray3;
+}
+
+.value {
+  color: $gray2;
+}
+
+.price {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $gray;
+  margin: 24px 0 0;
+
+  span {
+    color: $primary;
+  }
+
+  @media (max-width: $desktopSmall) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 21px;
+    line-height: 33px;
+  }
+}

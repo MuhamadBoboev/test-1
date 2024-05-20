@@ -1,0 +1,111 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.imgWrap {
+  position: relative;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ccc;
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    border-radius: 12px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 56%;
+  }
+}
+
+.img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  @media (max-width: $mobileLarge) {
+    flex-wrap: nowrap;
+  }
+}
+
+.title {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 600;
+  margin: 0 24px 0 0;
+  @include lineclamp(2);
+
+  @media (max-width: $desktopSmall) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 17px;
+    line-height: 28px;
+    flex-basis: 100%;
+    margin: 0 0 4px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    flex-basis: auto;
+    margin: 0 16px 0 0;
+  }
+}
+
+.link {
+  font-size: 17px;
+  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  color: $primary;
+  flex-shrink: 0;
+  text-decoration: none;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  @media (max-width: $tablet) {
+    width: fit-content;
+    font-size: 13px;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    @media (min-width: $tablet + 1px) {
+      svg {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  svg {
+    margin-left: 8px;
+    fill: $primary;
+    transition: all 250ms;
+  }
+}

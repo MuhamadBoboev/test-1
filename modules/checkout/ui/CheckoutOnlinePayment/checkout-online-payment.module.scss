@@ -1,0 +1,29 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.logo {
+  display: block;
+  margin: 0 auto 24px;
+  stroke: $primary;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  margin: 0 0 40px;
+  text-align: center;
+  color: $gray;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray2;
+  max-width: 400px;
+  margin: 0 auto 40px;
+}
+
+a.paymentLink {
+  height: 56px;
+}

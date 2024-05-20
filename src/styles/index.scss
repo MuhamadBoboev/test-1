@@ -1,0 +1,29 @@
+@import "normalize";
+@import "src/styles/variables";
+@import "src/styles/mixins";
+@import "core";
+@import "fonts";
+
+.app-promebel {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media (max-width: 970px) {
+    padding-bottom: 148px;
+    padding-top: 138px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 94px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    padding-bottom: 88px;
+    padding-top: 60px;
+  }
+}
+
+.app-main {
+  flex-grow: 1;
+}

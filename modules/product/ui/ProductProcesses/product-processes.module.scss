@@ -1,0 +1,153 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.processes {
+  margin-bottom: 60px;
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 38px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 65px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-bottom: 40px;
+  }
+}
+
+.header {
+  margin-bottom: 14px;
+  overflow: hidden;
+
+  @media (max-width: $desktopSmall) {
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-bottom: 14px;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.item {
+  margin-right: 24px;
+
+  @media (max-width: $desktopSmall) {
+    margin-right: 16px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-right: 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    margin-right: 24px;
+  }
+}
+
+.tab {
+  background: none;
+  display: block;
+  border: none;
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray;
+  padding-bottom: 8px;
+  cursor: pointer;
+  position: relative;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 11px;
+    line-height: 16px;
+    padding-bottom: 6px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 25px;
+    line-height: 40px;
+    padding-bottom: 13px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 15px;
+    line-height: 24px;
+    padding-bottom: 8px;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+      background: $gray3;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left bottom;
+    background: $gray3;
+    transition: all 250ms;
+
+    @media (max-width: $tablet) and (min-width: $mobileLarge + 1px) {
+      height: 1.7px;
+    }
+  }
+}
+
+.active {
+
+  &:hover {
+    &::after {
+      background: $primary;
+    }
+  }
+
+  &::after {
+    transform: scaleX(1);
+    background: $primary;
+  }
+}
+
+.description {
+  font-size: 15px;
+  line-height: 24px;
+  color: $gray;
+  margin: 0;
+
+  @media (max-width: $desktopSmall) {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  @media (max-width: $mobileLarge) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}

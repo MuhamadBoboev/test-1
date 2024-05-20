@@ -1,0 +1,65 @@
+@import 'src/styles/variables';
+@import 'src/styles/mixins';
+
+.footer {
+  background: #f9fafb;
+  padding: 80px 0;
+
+  @media (max-width: $mobileLarge) {
+    padding: 28px 0 0;
+  }
+}
+
+.bottom {
+  border-top: 1px solid $gray;
+  padding-top: 32px;
+  margin: 0 -16px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $mobileLarge) {
+    border-top: none;
+    padding: 0 16px;
+    flex-direction: column;
+    justify-content: start;
+    gap: 4px;
+  }
+}
+
+.year {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+
+.rightInfo {
+  display: flex;
+
+  p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+  }
+}
+
+.developer {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: $gray;
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+
+  @media (max-width: $mobileLarge) {
+    font-size: 13px;
+    line-height: 28px;
+    color: #fff;
+  }
+}
+.color {
+  color: #d82525;
+  margin: 0;
+}

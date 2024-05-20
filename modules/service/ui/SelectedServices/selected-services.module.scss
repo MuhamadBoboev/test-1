@@ -1,0 +1,108 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.services {
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 40px 0 rgba(238, 238, 238, 0.99),
+  0 4px 8px 0 rgba(66, 71, 76, 0.04);
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  margin-top: 48px;
+
+  @media (max-width: $desktopSmall) {
+    margin-top: 28px;
+    padding: 24px;
+  }
+
+  @media (max-width: 860px) {
+    margin-top: 40px;
+   
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #D1D5DB;
+}
+
+.tableContainer {
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 530px;
+}
+
+.headTitle {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: .4px;
+  color: $gray3;
+  padding-bottom: 16px;
+}
+
+.headName {
+  width: 27%;
+}
+
+.headProducts {
+  width: 23%;
+}
+
+.headValue {
+  width: 16.5%;
+}
+
+.headPrice {
+  width: 14.9%;
+}
+
+.headTotal {
+  width: 13.9%;
+}
+
+.row {
+  border-bottom: 1px solid #D1D5DB;
+}
+
+.value {
+  padding: 12px 6px 12px 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $gray2;
+}
+
+.productName {
+  font-weight: 600;
+
+  span {
+    @include lineclamp(2);
+  }
+}
+
+.total {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $primary;
+}
+
+.remove {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  svg {
+    stroke: $gray;
+  }
+}

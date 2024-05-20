@@ -1,0 +1,49 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.top {
+  background: $gray5;
+  padding: 12px 0;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  font-size: 13px;
+  line-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  color: $gray2;
+  text-decoration: none;
+  transition: all 250ms;
+
+  &:hover {
+    color: darken($gray2, 15%);
+
+    svg {
+      stroke: darken($gray2, 15%);
+    }
+  }
+  
+  svg {
+    stroke: $gray2;
+    fill: $gray2;
+    transition: all 250ms;
+    margin-right: 12px;
+  }
+}
+
+.button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
